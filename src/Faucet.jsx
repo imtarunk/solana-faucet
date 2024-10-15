@@ -13,6 +13,7 @@ import { clusterApiUrl } from '@solana/web3.js';
 import '@solana/wallet-adapter-react-ui/styles.css';
 import Airdrop from './Airdrop'
 import Transaction from './transation';
+import Payment from './transation';
 const Faucet = () => {
   return (
     <div>
@@ -24,6 +25,8 @@ const Faucet = () => {
               <WalletProvider wallets={[]} autoConnect>
                 <WalletModalProvider>
                   <div className='flex flex-col space-y-5'>
+
+                    <Payment />
                     <Airdrop />
                     <div className='flex justify-center items-center space-x-3'>
                       <WalletMultiButton className='bg-custom-gradient' />
