@@ -4,9 +4,10 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const Airdrop = () => {
   const { connection } = useConnection(); // Destructure the connection object
-  const { publicKey } = useWallet(); // Destructure the publicKey from the wallet
+  const { publicKey, signMessage } = useWallet(); // Destructure the publicKey from the wallet
   const [airdropAmount, setAirdropAmount] = React.useState('');
   const [balance, setBalance] = React.useState(null); // State to hold the balance
+
 
   // Function to fetch balance
   async function fetchBalance() {
